@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useParams} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { postsOp, postsSel } from "../../store/posts";
+import './styles.css';
 
 
 
@@ -21,12 +22,12 @@ export const PostDetails = () => {
   return (
     <>
       {post?.title ? (
-        <div>
-          <h2>{post.title}</h2>
+        <section className = 'postdetails-section'>
+          <h1>{post.title}</h1>
           <p>{post.body}</p>
           <p>User Id: {post.userId}</p>
           <p>Post Id: {post.id}</p>
-        </div>
+        </section>
       ) : (
         <h1>Post not found</h1>
       )}

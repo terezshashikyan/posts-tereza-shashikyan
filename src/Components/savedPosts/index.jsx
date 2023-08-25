@@ -13,7 +13,7 @@ export  const SavedPosts = () => {
   
   useEffect(() => {
     dispatch(postsOp.getSavedPosts());
-  }, [dispatch]);
+  }, []);
                                       
 
 
@@ -21,9 +21,9 @@ export  const SavedPosts = () => {
       <div className="posts">
       {savedPosts.map((post) => (
         <>
-        <PostCard post={post} key={post.id} savePost = {() => {unSavePost(post)}}/>
+        <PostCard post={post} key={post.id + 1000} buttonText = 'unsave' savePost = {() => {unSavePost(post)}}/>
         </>
       ))} 
-    </div>) :  <div><button> You do not have saved products. Go to <Link to={"/posts"}>Posts</Link> </button></div>
+    </div>) :  <div>You do not have saved posts. Go to <Link to={"/posts"}>Posts</Link> </div>
     
 }

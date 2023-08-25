@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { PostCard } from "../../Components/PostCard";
 import { useDispatch, useSelector } from "react-redux";
 import { postsOp, postsSel } from "../../store/posts";
+import './styles.css';
 
 
 export const Posts = () => {
@@ -47,15 +48,15 @@ export const Posts = () => {
   return (
     <div classname = 'posts-section'>
     <div className="addpost-section">
-    <input value={userId} onChange={(e) => setUserId(e.target.value)} />
-      <input value={title} onChange={(e) => setTitle(e.target.value)} />
-      <input value={body} onChange={(e) => setBody(e.target.value)} />
+    <input value={userId} placeholder = "user id" onChange={(e) => setUserId(e.target.value)} />
+      <input value={title} placeholder = "title" onChange={(e) => setTitle(e.target.value)} />
+      <input value={body} placeholder = "body" onChange={(e) => setBody(e.target.value)} />
       <button onClick={createPost}>Add post</button>
     </div>
     <div className="posts">    
       {posts.map((post) => (
         <>
-        <PostCard post={post} key={post.id} savePost = {() => {savePost(post)}}/>
+        <PostCard post={post} key={post.id} buttonText = 'Save Post' savePost = {() => {savePost(post)}}/>
         </>
       ))}
     </div>

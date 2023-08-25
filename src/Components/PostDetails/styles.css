@@ -1,0 +1,22 @@
+.postdetails-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    align-items: start;
+    padding: 10% 10%;
+}
+
+
+
+.postdetails-section  h1 {
+   font-size: 50px;
+}
+
+.postdetails-section h1::after {
+    content: "";
+    width: 100px;
+    height: 5px;
+    border-bottom: 8px solid #ffffff;
+    display: block;
+    border-radius: 15px;
+ }
