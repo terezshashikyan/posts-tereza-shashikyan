@@ -1,0 +1,26 @@
+.posts-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+  }
+  .addpost-section {
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+    width: 100%;
+    padding: 1%;
+  }
+  
+  .addpost-section input {
+  border-radius: 5%;
+  padding: 1%;
+  
+  }
+
+
+  .posts {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px;
+  }
